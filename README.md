@@ -2,7 +2,7 @@
 
 <img src="https://user-images.githubusercontent.com/49964697/114432576-d9670200-9b8e-11eb-9539-46febc7c329f.png" width="200" height="200">
 
-## Introduction
+## What is Sneak Peek?
   
   Our mobile application and website Sneak Peek with Google Chrome extension is a software using instant reminders to help users find shoes that fit best. Sneak Peek is the beginning of impeccable advancements in technology that helps in making one’s life more easier, and time efficient. This advancement in technology will allow individuals to figure out the release of a sneaker from the touch of their phone or from a click of a computer. This mobile application and website, “Sneak Peek” is designed to ensure individuals will always order kicks that fit them perfectly the way they like it. This app will help users find the perfect shoe for them and will make sure customers are content.
 
