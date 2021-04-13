@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Paper } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
+import { Element, scroller } from "react-scroll";
+import { View } from 'react-native';
 import img01 from "../assets/pictures/CardImages/img01.jpg";
 import img02 from "../assets/pictures/CardImages/img02.jpg";
 import img03 from "../assets/pictures/CardImages/img03.jpg";
@@ -299,13 +299,75 @@ const Shoe2Container = styled.div`
   background-color: #148F77;
 `;
 
+const MonthSelectContainer = styled.div`
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Leckerli One'
+`;
+
+const MonthContainer = styled.div`
+  padding-top: 20px;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+`;
+
+const ButtonsContainer = styled.div`
+  padding-top: 10px;
+  padding-bottom: 40px;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+`;
+
+
 export function DateCards(props) {
+
+  const scrollNext = () => {
+    scroller.scrollTo("april", { smooth: true, duration: 1450});
+    
+  }
+
+  const scrollNext1 = () => {
+    scroller.scrollTo("may", { smooth: true, duration: 1450});
+    
+  }
+
+  const scrollNext2 = () => {
+    scroller.scrollTo("june", { smooth: true, duration: 1450});
+    
+  }
 
   const classes = gridStyles();
 
     return (
       <Container maxWidth="lg" className={classes.cardsContainer}>
-        <Typography variant="h4" className={classes.April}>
+        <MonthSelectContainer>
+          Select The Month
+        </MonthSelectContainer>
+        <ButtonsContainer>
+        <MonthContainer>
+          <View style={{ flexDirection:"row", justifyContent: "center",}}>
+            <View>
+            <button style={{ background: "#cc0000", border: "none", padding: "20px 20px 20px 20px", borderRadius: "40px", fontFamily: 'Arimo', fontWeight: 'bold'}} onClick={scrollNext}>April</button>
+            </View>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <View>
+            <button style={{ background: "#33cc33", border: "none", padding: "20px 20px 20px 20px", borderRadius: "40px", fontFamily: 'Arimo', fontWeight: 'bold'}} onClick={scrollNext1}>May</button>
+            </View>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <View>
+            <button style={{ background: "#33cccc", border: "none", padding: "20px 20px 20px 20px", borderRadius: "40px", fontFamily: 'Arimo', fontWeight: 'bold'}} onClick={scrollNext2}>June</button>
+            </View>
+          </View>
+          </MonthContainer>
+        </ButtonsContainer>
+        <Typography variant="h4" className={classes.April} name="april">
           April
         </Typography>
         <Grid container spacing={3}>
@@ -460,7 +522,7 @@ export function DateCards(props) {
         </Grid>
         
         
-        <Typography variant="h4" className={classes.May}>
+        <Typography variant="h4" className={classes.May} name="may">
           May
         </Typography>
         <Grid container spacing={3}>
@@ -608,7 +670,7 @@ export function DateCards(props) {
         </Grid>
 
 
-        <Typography variant="h4" className={classes.June}>
+        <Typography variant="h4" className={classes.June} name="june">
           June
         </Typography>
         <Grid container spacing={3}>
@@ -769,4 +831,4 @@ export function DateCards(props) {
 
       </Container>
     );
-}
+  }

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import {motion} from "framer-motion";
 import { Logo } from "../../components/logo";
 import { Element, scroller } from "react-scroll";
 import { DropArrow } from "../../components/arrow";
