@@ -9,7 +9,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import { Element, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 import { View } from 'react-native';
 import img01 from "../assets/pictures/CardImages/img01.jpg";
 import img02 from "../assets/pictures/CardImages/img02.jpg";
