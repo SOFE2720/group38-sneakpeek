@@ -5,7 +5,7 @@ import { Element, scroller } from "react-scroll";
 import { DropArrow } from "../../components/arrow";
 import BackgroundImg from "../../assets/pictures/background-shoe-img-3.JPG";
 
-const TopContainer = styled.div`
+const TopContainer = styled.div` <!-- First comment! -->
     position relative;
     width: 100%;
     height: 100vh;
